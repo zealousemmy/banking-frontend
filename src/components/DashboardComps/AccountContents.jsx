@@ -1,0 +1,420 @@
+import React from "react";
+
+const AccountContents = () => {
+  return (
+    <section className="dashboard-section body-collapse account">
+      <div className="overlay pt-120">
+        <div className="container-fruid">
+          <div className="main-content">
+            <div className="row">
+              <div className="col-xxl-3 col-xl-4 col-md-6">
+                <div className="owner-details">
+                  <div className="profile-area">
+                    <div className="profile-img">
+                      <img
+                        src="/dash-assets/images/owner-profile.png"
+                        alt="image"
+                      />
+                    </div>
+                    <div className="name-area">
+                      <h6>Alfred Davis</h6>
+                      <p className="active-status">Active</p>
+                    </div>
+                  </div>
+                  <div className="owner-info">
+                    <ul>
+                      <li>
+                        <p>Account ID:</p>
+                        <span className="mdr">Rex49484</span>
+                      </li>
+                      <li>
+                        <p>Joined:</p>
+                        <span className="mdr">Aug 25,2021</span>
+                      </li>
+                      <li>
+                        <p>Confirm status:</p>
+                        <span className="mdr">80%</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="owner-action">
+                    <a href="javascript:void(0)">
+                      <img
+                        src="/dash-assets/images/icon/logout.png"
+                        alt="image"
+                      />
+                      Logout
+                    </a>
+                    <a href="javascript:void(0)" className="delete">
+                      <img
+                        src="/dash-assets/images/icon/delete-2.png"
+                        alt="image"
+                      />
+                      Delete Account
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xxl-9 col-xl-8">
+                <div className="tab-main">
+                  <ul className="nav nav-tabs" role="tablist">
+                    <li className="nav-item" role="presentation">
+                      <button
+                        className="nav-link active"
+                        id="account-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#account"
+                        type="button"
+                        role="tab"
+                        aria-controls="account"
+                        aria-selected="true"
+                      >
+                        Account
+                      </button>
+                    </li>
+                    <li className="nav-item" role="presentation">
+                      <button
+                        className="nav-link"
+                        id="security-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#security"
+                        type="button"
+                        role="tab"
+                        aria-controls="security"
+                        aria-selected="false"
+                      >
+                        Security
+                      </button>
+                    </li>
+                    <li className="nav-item" role="presentation">
+                      <button
+                        className="nav-link"
+                        id="payment-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#payment"
+                        type="button"
+                        role="tab"
+                        aria-controls="payment"
+                        aria-selected="false"
+                      >
+                        Payment Methods
+                      </button>
+                    </li>
+                  </ul>
+                  <div className="tab-content mt-40">
+                    <div
+                      className="tab-pane fade show active"
+                      id="account"
+                      role="tabpanel"
+                      aria-labelledby="account-tab"
+                    >
+                      <div className="upload-avatar">
+                        <div className="avatar-left d-flex align-items-center">
+                          <div className="profile-img">
+                            <img
+                              src="/dash-assets/images/owner-profile-2.png"
+                              alt="image"
+                            />
+                          </div>
+                          <div className="instraction">
+                            <h6>Your Avatar</h6>
+                            <p>Profile picture size: 400px x 400px</p>
+                          </div>
+                        </div>
+                        <div className="avatar-right">
+                          <div className="file-upload">
+                            <div className="right-area">
+                              <label className="file">
+                                <input type="file" />
+                                <span className="file-custom" />
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <form action="#">
+                        <div className="row justify-content-center">
+                          <div className="col-md-6">
+                            <div className="single-input">
+                              <label htmlFor="fName">First Name</label>
+                              <input
+                                type="text"
+                                id="fName"
+                                placeholder="Alfred"
+                              />
+                            </div>
+                          </div>
+                          <div className="col-md-6">
+                            <div className="single-input">
+                              <label htmlFor="lName">Last Name</label>
+                              <input
+                                type="text"
+                                id="lName"
+                                placeholder="Davis"
+                              />
+                            </div>
+                          </div>
+                          <div className="col-md-12">
+                            <div className="single-input">
+                              <label htmlFor="email">Email</label>
+                              <div className="row input-status d-flex align-items-center">
+                                <div className="col-6">
+                                  <input
+                                    type="text"
+                                    id="email"
+                                    placeholder="alfred6598@gmail.com"
+                                  />
+                                </div>
+                                <div className="col-6">
+                                  <span className="pending">
+                                    <img
+                                      src="/dash-assets/images/icon/pending.png"
+                                      alt="icon"
+                                    />
+                                    E-mail confirmation in pending
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="col-md-12">
+                            <div className="single-input">
+                              <label htmlFor="phone">Phone</label>
+                              <div className="row input-status d-flex align-items-center">
+                                <div className="col-6">
+                                  <input
+                                    type="text"
+                                    id="phone"
+                                    placeholder="(316) 555-0116"
+                                  />
+                                </div>
+                                <div className="col-6">
+                                  <span className="confirm">
+                                    <img
+                                      src="/dash-assets/images/icon/confirm.png"
+                                      alt="icon"
+                                    />
+                                    Phone number confirm
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="col-md-12">
+                            <div className="single-input file">
+                              <label>ID Confirmation documents</label>
+                              <div className="row input-status d-flex align-items-center">
+                                <div className="col-6">
+                                  <div className="file-upload">
+                                    <div className="right-area">
+                                      <label className="file">
+                                        <input type="file" />
+                                        <span className="file-custom" />
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="col-6">
+                                  <span className="notconfirm">
+                                    <img
+                                      src="/dash-assets/images/icon/not-confirm.png"
+                                      alt="icon"
+                                    />
+                                    Person not confirmed
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="col-md-12">
+                            <div className="single-input">
+                              <label htmlFor="address">Address</label>
+                              <input
+                                type="text"
+                                id="address"
+                                placeholder="2972 Westheimer Rd. Santa Ana, Illinois 85486"
+                              />
+                            </div>
+                          </div>
+                          <div className="col-md-12">
+                            <div className="btn-border">
+                              <button className="cmn-btn">Account</button>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div
+                      className="tab-pane fade"
+                      id="security"
+                      role="tabpanel"
+                      aria-labelledby="security-tab"
+                    >
+                      <div className="single-content authentication d-flex align-items-center justify-content-between">
+                        <div className="left">
+                          <h5>Two Factor Authentication</h5>
+                          <p>
+                            Two-Factor Authentication (2FA) can be used to help
+                            protect your account
+                          </p>
+                        </div>
+                        <div className="right">
+                          <button>Enable</button>
+                        </div>
+                      </div>
+                      <div className="change-pass mb-40">
+                        <div className="row">
+                          <div className="col-sm-6">
+                            <h5>Change Password</h5>
+                            <p>
+                              You can always change your password for security
+                              reasons or reset your password in case you forgot
+                              it.
+                            </p>
+                          </div>
+                          <div className="col-sm-6">
+                            <form action="#">
+                              <div className="row justify-content-center">
+                                <div className="col-md-12">
+                                  <div className="single-input">
+                                    <label htmlFor="current-password">
+                                      Current password
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="current-password"
+                                      placeholder="Current password"
+                                    />
+                                  </div>
+                                </div>
+                                <div className="col-md-12">
+                                  <div className="single-input">
+                                    <label htmlFor="new-password">
+                                      New password
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="new-password"
+                                      placeholder="New password"
+                                    />
+                                  </div>
+                                </div>
+                                <div className="col-md-12">
+                                  <div className="single-input">
+                                    <label htmlFor="confirm-password">
+                                      Confirm New password
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="confirm-password"
+                                      placeholder="Confirm New password"
+                                    />
+                                  </div>
+                                </div>
+                                <div className="col-md-12">
+                                  <div className="btn-border w-100">
+                                    <button className="cmn-btn w-100">
+                                      Update password
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="tab-pane pb-120 fade"
+                      id="payment"
+                      role="tabpanel"
+                      aria-labelledby="payment-tab"
+                    >
+                      <div className="card-area">
+                        <h6>Linked Payment system</h6>
+                        <div className="card-content d-flex flex-wrap">
+                          <div className="single-card">
+                            <button
+                              type="button"
+                              className="reg w-100"
+                              data-bs-toggle="modal"
+                              data-bs-target="#transactionsMod"
+                            >
+                              <img
+                                src="/dash-assets/images/visa-card.png"
+                                alt="image"
+                                className="w-100"
+                              />
+                            </button>
+                          </div>
+                          <div className="single-card">
+                            <button
+                              type="button"
+                              className="reg w-100"
+                              data-bs-toggle="modal"
+                              data-bs-target="#transactionsMod"
+                            >
+                              <img
+                                src="/dash-assets/images/paylio-card.png"
+                                alt="image"
+                                className="w-100"
+                              />
+                            </button>
+                          </div>
+                          <div className="single-card">
+                            <button
+                              type="button"
+                              className="reg w-100"
+                              data-bs-toggle="modal"
+                              data-bs-target="#transactionsMod"
+                            >
+                              <img
+                                src="/dash-assets/images/paypal-card.png"
+                                alt="image"
+                                className="w-100"
+                              />
+                            </button>
+                          </div>
+                          <div className="single-card">
+                            <button
+                              type="button"
+                              className="reg w-100"
+                              data-bs-toggle="modal"
+                              data-bs-target="#transactionsMod"
+                            >
+                              <img
+                                src="/dash-assets/images/blockchain-card.png"
+                                alt="image"
+                                className="w-100"
+                              />
+                            </button>
+                          </div>
+                          <div className="single-card">
+                            <button
+                              type="button"
+                              className="reg w-100"
+                              data-bs-toggle="modal"
+                              data-bs-target="#addcardMod"
+                            >
+                              <img
+                                src="/dash-assets/images/add-new.png"
+                                alt="image"
+                                className="w-100"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AccountContents;
