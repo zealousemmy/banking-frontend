@@ -80,7 +80,10 @@ const DashIndexPageContents = () => {
                     <h5 style={{ color: "#F0ECECBD" }} className="receive">
                       Account Number
                     </h5>
-                    <h2 style={{ color: "white", margin: "0.5rem 0" }}>
+                    <h2
+                      className="h5"
+                      style={{ color: "white", margin: "0.5rem 0" }}
+                    >
                       {profile?.accountNo}
                     </h2>
                   </div>
@@ -97,7 +100,13 @@ const DashIndexPageContents = () => {
                     <h5 style={{ color: "#F0ECECBD" }} className="receive">
                       Routing Number
                     </h5>
-                    <h2 style={{ color: "white", margin: "0.5rem 0" }}>
+                    <h2
+                      className="h5"
+                      style={{
+                        color: "white",
+                        margin: "0.5rem 0",
+                      }}
+                    >
                       3278265925
                     </h2>
                   </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TransferBankForm from "./TransferBankForm";
 import TransferDetails from "./TransferDetails";
 import VerifyOtp from "./VerifyOtp";
@@ -8,15 +8,19 @@ import VerifyCot from "./VerifyCot";
 import CongratsModal from "./modals/CongratsModal";
 import TransferLocalBankForm from "./TransferLocalBankForm";
 import TransferInternationalBankForm from "./TransferInternationalBankForm";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getCookie } from "cookies-next";
 import { createTransfer } from "@/redux/features/transaction/transaction-slice";
+import { profileSelector } from "@/redux/features/profile/profile-slice";
+import TransferError from "./TransferError";
 
 const TransferToInternationalBank = () => {
   const [currentStep, setCurrentStep] = useState("transfer-form");
   const transferDetails = getCookie("elite-trust-finance-transfer-details");
   const detailsData = transferDetails ? JSON.parse(transferDetails) : "";
   const dispatch = useDispatch();
+
+  const { profile, gettingProfile } = useSelector(profileSelector);
 
   const handleTransfer = () => {
     setCurrentStep("transfer-details");
@@ -33,8 +37,18 @@ const TransferToInternationalBank = () => {
     const requiredDetails = { ...detailsData };
     dispatch(createTransfer(requiredDetails));
   };
+
+  useEffect(() => {
+    if (profile?.accountStatus === "hold") {
+      setCurrentStep("error");
+    }
+    if (profile?.accountStatus === "blocked") {
+      setCurrentStep("error");
+    }
+  }, [profile]);
   return (
     <div>
+      {currentStep === "error" && <TransferError />}
       {currentStep === "transfer-form" && (
         <TransferInternationalBankForm handleClick={handleTransfer} />
       )}

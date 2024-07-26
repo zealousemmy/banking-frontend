@@ -14,6 +14,7 @@ import {
 import { getCookie } from "cookies-next";
 import { useDispatch, useSelector } from "react-redux";
 import TransferSuccess from "./TransferSuccess";
+import TransferError from "./TransferError";
 
 const TransferToSameBank = () => {
   const [currentStep, setCurrentStep] = useState("transfer-form");
@@ -60,9 +61,16 @@ const TransferToSameBank = () => {
     if (createTransferSuccess === true) {
       setCurrentStep("transfer-successful");
     }
-  }, []);
+    if (profile?.accountStatus === "hold") {
+      setCurrentStep("error");
+    }
+    if (profile?.accountStatus === "blocked") {
+      setCurrentStep("error");
+    }
+  }, [profile]);
   return (
     <div>
+      {currentStep === "error" && <TransferError />}
       {currentStep === "transfer-successful" && <TransferSuccess />}
       {currentStep === "transfer-form" && (
         <TransferBankForm handleClick={handleTransfer} />

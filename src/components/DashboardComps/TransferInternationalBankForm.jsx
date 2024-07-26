@@ -161,7 +161,7 @@ const TransferInternationalBankForm = ({ handleClick }) => {
                     name="accountName"
                     value={transferData.accountName}
                     onChange={handleChange}
-                    placeholder={"Emily"}
+                    placeholder={"Account name"}
                     type="text"
                   />
                 </div>
