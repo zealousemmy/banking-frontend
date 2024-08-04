@@ -82,7 +82,7 @@ const VerifyCot = ({ cotCallback, amount, accontName }) => {
       );
       console.log(response, "from response update request");
       if (response.status === 200) {
-        dispatch(sendCot(accountData));
+        // dispatch(sendCot(accountData));
         await cotCallback();
         setVerifying(false);
         setStage("transfer-successful")
