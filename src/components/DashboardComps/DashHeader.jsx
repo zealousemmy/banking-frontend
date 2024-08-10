@@ -146,7 +146,13 @@ const DashHeader = () => {
                               <h3>{userInitials}</h3>
                             </div>
                           ) : (
-                            <img className="profile-pics" src={`${profile?.image}`} alt="image" />
+                            <div className="user-profile2">
+                              <img
+                                className="profile-pics"
+                                src={`${profile?.image}`}
+                                alt="image"
+                              />
+                            </div>
                           )}
                         </div>
                         {/* <div className="profile-img">

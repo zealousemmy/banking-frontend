@@ -411,6 +411,29 @@ label {
   width: 100%;
   border-radius: 100%;
 }
+
+.user-profile2 {
+  /* display: none; */
+  width: 60px;
+  height: inherit;
+}
+.user-profile2 img {
+  width: 100%;
+  height: 60px;
+  border-radius: 100%;
+}
+
+.user-profile3 {
+  /* display: none; */
+  width: 120px;
+  height: inherit;
+  margin: 0 auto;
+}
+.user-profile3 img {
+  width: 100%;
+  height: 120px;
+  border-radius: 100%;
+}
 @media (max-width: 575px) {
   .pt-120 {
     padding-top: 50px;
@@ -1793,8 +1816,8 @@ label {
   justify-content: center;
 }
 
-.profile-pics img{
-  width:50px !important;
+.profile-pics img {
+  width: 50px !important;
   border-radius: 100% !important;
 }
 

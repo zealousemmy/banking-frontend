@@ -94,11 +94,13 @@ const AccountContents = () => {
                           <h3>{userInitials}</h3>
                         </div>
                       ) : (
-                        <img
-                          src={`${profile?.image}`}
-                          alt="image"
-                          className="profile-pics"
-                        />
+                        <div className="user-profile3">
+                          <img
+                            src={`${profile?.image}`}
+                            alt="image"
+                            className="profile-pics"
+                          />
+                        </div>
                       )}
                     </div>
                     <div className="name-area">
@@ -182,11 +184,13 @@ const AccountContents = () => {
                                 <h3>{userInitials}</h3>
                               </div>
                             ) : (
-                              <img
-                              className="profile-pics"
-                              src={`${profile?.image}`}
-                                alt="image"
-                              />
+                              <div className="user-profile2">
+                                <img
+                                  className="profile-pics"
+                                  src={`${profile?.image}`}
+                                  alt="image"
+                                />
+                              </div>
                             )}
                           </div>
                           {/* <div className="profile-img">
@@ -204,7 +208,10 @@ const AccountContents = () => {
                           <div className="file-upload">
                             <div className="right-area">
                               <label className="file">
-                                <input onChange={handleFileChange} type="file" />
+                                <input
+                                  onChange={handleFileChange}
+                                  type="file"
+                                />
                                 <span className="file-custom" />
                               </label>
                             </div>
