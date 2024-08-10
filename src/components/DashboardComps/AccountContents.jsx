@@ -1,6 +1,84 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
+import { redirect, useRouter } from "next/navigation";
+import { formatAmount, formatDate, formatTime } from "@/hooks/formatAmount";
+import { useLayoutEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  getProfile,
+  profileSelector,
+} from "@/redux/features/profile/profile-slice";
+import { getCookie, deleteCookie } from "cookies-next";
+import {
+  getTransfers,
+  transactionSelector,
+} from "@/redux/features/transaction/transaction-slice";
+import { uploadImage } from "@/hooks/imageUpload";
 
 const AccountContents = () => {
+  const router = useRouter();
+  const [image, setImage] = useState(null);
+  const authenticated = getCookie("elite-trust-finance-usertoken");
+  const dispatch = useDispatch();
+
+  const { profile, gettingProfile } = useSelector(profileSelector);
+  const { transactions, gettingTransactions } =
+    useSelector(transactionSelector);
+
+  useEffect(() => {
+    dispatch(getProfile());
+    dispatch(getTransfers());
+  }, []);
+
+  // useLayoutEffect(() => {
+  //   const isAuth = authenticated;
+  //   if (!isAuth) {
+  //     redirect("/login");
+  //   }
+  // }, []);
+
+  const handleLogout = () => {
+    console.log("clicked now");
+    localStorage.removeItem("elite-trust-finance-usertoken");
+    localStorage.removeItem("elite-trust-finance-userid");
+    deleteCookie("elite-trust-finance-usertoken");
+    deleteCookie("elite-trust-finance-userid");
+    router.push("/login");
+  };
+
+  function displayInitials(fullName) {
+    var names = fullName.split(" ");
+    var initials = "";
+
+    for (var i = 0; i < names.length; i++) {
+      var name = names[i];
+      initials += name[0];
+    }
+
+    return initials;
+  }
+
+  const firstFourItems = transactions.length > 0 && transactions?.slice(0, 4);
+  console.log("user profile", profile);
+  const userInitials = displayInitials(
+    `${profile?.firstName} ${profile?.lastName}`
+  );
+
+  const handleFileChange = async (event) => {
+    if (event.target.files && event.target.files[0]) {
+      const selectedFile = event.target.files[0];
+      setImage(selectedFile);
+
+      try {
+        const result = await uploadImage(selectedFile, profile._id);
+        console.log("Image uploaded successfully:", result);
+        dispatch(getProfile());
+      } catch (error) {
+        console.error("Failed to upload image:", error);
+      }
+    }
+  };
+
   return (
     <section className="dashboard-section body-collapse account">
       <div className="overlay pt-120">
@@ -11,25 +89,33 @@ const AccountContents = () => {
                 <div className="owner-details">
                   <div className="profile-area">
                     <div className="profile-img">
-                      <img
-                        src="/dash-assets/images/owner-profile.png"
-                        alt="image"
-                      />
+                      {!profile?.image ? (
+                        <div className="userProfileImageText">
+                          <h3>{userInitials}</h3>
+                        </div>
+                      ) : (
+                        <img
+                          src={`${profile?.image}`}
+                          alt="image"
+                        />
+                      )}
                     </div>
                     <div className="name-area">
-                      <h6>Alfred Davis</h6>
-                      <p className="active-status">Active</p>
+                      <h6>{profile?.userName}</h6>
+                      <p className="active-status">{profile?.accountStatus}</p>
                     </div>
                   </div>
                   <div className="owner-info">
                     <ul>
                       <li>
-                        <p>Account ID:</p>
-                        <span className="mdr">Rex49484</span>
+                        <p>Account No:</p>
+                        <span className="mdr">{profile?.accountNo}</span>
                       </li>
                       <li>
                         <p>Joined:</p>
-                        <span className="mdr">Aug 25,2021</span>
+                        <span className="mdr">
+                          {formatDate(profile?.createdAt)}
+                        </span>
                       </li>
                       <li>
                         <p>Confirm status:</p>
@@ -38,19 +124,12 @@ const AccountContents = () => {
                     </ul>
                   </div>
                   <div className="owner-action">
-                    <a href="javascript:void(0)">
+                    <a href="javascript:void(0)" onClick={handleLogout}>
                       <img
                         src="/dash-assets/images/icon/logout.png"
                         alt="image"
                       />
                       Logout
-                    </a>
-                    <a href="javascript:void(0)" className="delete">
-                      <img
-                        src="/dash-assets/images/icon/delete-2.png"
-                        alt="image"
-                      />
-                      Delete Account
                     </a>
                   </div>
                 </div>
@@ -86,20 +165,6 @@ const AccountContents = () => {
                         Security
                       </button>
                     </li>
-                    <li className="nav-item" role="presentation">
-                      <button
-                        className="nav-link"
-                        id="payment-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#payment"
-                        type="button"
-                        role="tab"
-                        aria-controls="payment"
-                        aria-selected="false"
-                      >
-                        Payment Methods
-                      </button>
-                    </li>
                   </ul>
                   <div className="tab-content mt-40">
                     <div
@@ -111,11 +176,23 @@ const AccountContents = () => {
                       <div className="upload-avatar">
                         <div className="avatar-left d-flex align-items-center">
                           <div className="profile-img">
+                            {!profile?.image ? (
+                              <div className="userProfileImageText2">
+                                <h3>{userInitials}</h3>
+                              </div>
+                            ) : (
+                              <img
+                              src={`${profile?.image}`}
+                                alt="image"
+                              />
+                            )}
+                          </div>
+                          {/* <div className="profile-img">
                             <img
                               src="/dash-assets/images/owner-profile-2.png"
                               alt="image"
                             />
-                          </div>
+                          </div> */}
                           <div className="instraction">
                             <h6>Your Avatar</h6>
                             <p>Profile picture size: 400px x 400px</p>
@@ -125,7 +202,7 @@ const AccountContents = () => {
                           <div className="file-upload">
                             <div className="right-area">
                               <label className="file">
-                                <input type="file" />
+                                <input onChange={handleFileChange} type="file" />
                                 <span className="file-custom" />
                               </label>
                             </div>
@@ -140,7 +217,7 @@ const AccountContents = () => {
                               <input
                                 type="text"
                                 id="fName"
-                                placeholder="Alfred"
+                                placeholder={profile?.firstName}
                               />
                             </div>
                           </div>
@@ -150,7 +227,7 @@ const AccountContents = () => {
                               <input
                                 type="text"
                                 id="lName"
-                                placeholder="Davis"
+                                placeholder={profile?.lastName}
                               />
                             </div>
                           </div>
@@ -162,10 +239,19 @@ const AccountContents = () => {
                                   <input
                                     type="text"
                                     id="email"
-                                    placeholder="alfred6598@gmail.com"
+                                    placeholder={profile?.email}
                                   />
                                 </div>
                                 <div className="col-6">
+                                  <span className="confirm">
+                                    <img
+                                      src="/dash-assets/images/icon/confirm.png"
+                                      alt="icon"
+                                    />
+                                    email confirm
+                                  </span>
+                                </div>
+                                {/* <div className="col-6">
                                   <span className="pending">
                                     <img
                                       src="/dash-assets/images/icon/pending.png"
@@ -173,11 +259,11 @@ const AccountContents = () => {
                                     />
                                     E-mail confirmation in pending
                                   </span>
-                                </div>
+                                </div> */}
                               </div>
                             </div>
                           </div>
-                          <div className="col-md-12">
+                          {/* <div className="col-md-12">
                             <div className="single-input">
                               <label htmlFor="phone">Phone</label>
                               <div className="row input-status d-flex align-items-center">
@@ -199,8 +285,8 @@ const AccountContents = () => {
                                 </div>
                               </div>
                             </div>
-                          </div>
-                          <div className="col-md-12">
+                          </div> */}
+                          {/* <div className="col-md-12">
                             <div className="single-input file">
                               <label>ID Confirmation documents</label>
                               <div className="row input-status d-flex align-items-center">
@@ -225,14 +311,14 @@ const AccountContents = () => {
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          </div> */}
                           <div className="col-md-12">
                             <div className="single-input">
                               <label htmlFor="address">Address</label>
                               <input
                                 type="text"
                                 id="address"
-                                placeholder="2972 Westheimer Rd. Santa Ana, Illinois 85486"
+                                placeholder={profile?.address}
                               />
                             </div>
                           </div>
@@ -250,18 +336,6 @@ const AccountContents = () => {
                       role="tabpanel"
                       aria-labelledby="security-tab"
                     >
-                      <div className="single-content authentication d-flex align-items-center justify-content-between">
-                        <div className="left">
-                          <h5>Two Factor Authentication</h5>
-                          <p>
-                            Two-Factor Authentication (2FA) can be used to help
-                            protect your account
-                          </p>
-                        </div>
-                        <div className="right">
-                          <button>Enable</button>
-                        </div>
-                      </div>
                       <div className="change-pass mb-40">
                         <div className="row">
                           <div className="col-sm-6">
@@ -320,88 +394,6 @@ const AccountContents = () => {
                                 </div>
                               </div>
                             </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="tab-pane pb-120 fade"
-                      id="payment"
-                      role="tabpanel"
-                      aria-labelledby="payment-tab"
-                    >
-                      <div className="card-area">
-                        <h6>Linked Payment system</h6>
-                        <div className="card-content d-flex flex-wrap">
-                          <div className="single-card">
-                            <button
-                              type="button"
-                              className="reg w-100"
-                              data-bs-toggle="modal"
-                              data-bs-target="#transactionsMod"
-                            >
-                              <img
-                                src="/dash-assets/images/visa-card.png"
-                                alt="image"
-                                className="w-100"
-                              />
-                            </button>
-                          </div>
-                          <div className="single-card">
-                            <button
-                              type="button"
-                              className="reg w-100"
-                              data-bs-toggle="modal"
-                              data-bs-target="#transactionsMod"
-                            >
-                              <img
-                                src="/dash-assets/images/paylio-card.png"
-                                alt="image"
-                                className="w-100"
-                              />
-                            </button>
-                          </div>
-                          <div className="single-card">
-                            <button
-                              type="button"
-                              className="reg w-100"
-                              data-bs-toggle="modal"
-                              data-bs-target="#transactionsMod"
-                            >
-                              <img
-                                src="/dash-assets/images/paypal-card.png"
-                                alt="image"
-                                className="w-100"
-                              />
-                            </button>
-                          </div>
-                          <div className="single-card">
-                            <button
-                              type="button"
-                              className="reg w-100"
-                              data-bs-toggle="modal"
-                              data-bs-target="#transactionsMod"
-                            >
-                              <img
-                                src="/dash-assets/images/blockchain-card.png"
-                                alt="image"
-                                className="w-100"
-                              />
-                            </button>
-                          </div>
-                          <div className="single-card">
-                            <button
-                              type="button"
-                              className="reg w-100"
-                              data-bs-toggle="modal"
-                              data-bs-target="#addcardMod"
-                            >
-                              <img
-                                src="/dash-assets/images/add-new.png"
-                                alt="image"
-                                className="w-100"
-                              />
-                            </button>
                           </div>
                         </div>
                       </div>

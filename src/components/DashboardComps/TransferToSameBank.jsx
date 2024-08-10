@@ -61,12 +61,12 @@ const TransferToSameBank = () => {
     if (createTransferSuccess === true) {
       setCurrentStep("transfer-successful");
     }
-    if (profile?.accountStatus === "hold") {
-      setCurrentStep("error");
-    }
-    if (profile?.accountStatus === "blocked") {
-      setCurrentStep("error");
-    }
+    // if (profile?.accountStatus === "hold") {
+    //   setCurrentStep("error");
+    // }
+    // if (profile?.accountStatus === "blocked") {
+    //   setCurrentStep("error");
+    // }
   }, [profile]);
   return (
     <div>

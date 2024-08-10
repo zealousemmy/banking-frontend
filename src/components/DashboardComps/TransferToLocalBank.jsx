@@ -37,14 +37,14 @@ const TransferToLocalBank = () => {
     dispatch(createTransfer(requiredDetails));
   };
 
-  useEffect(() => {
-    if (profile?.accountStatus === "hold") {
-      setCurrentStep("error");
-    }
-    if (profile?.accountStatus === "blocked") {
-      setCurrentStep("error");
-    }
-  }, [profile]);
+  // useEffect(() => {
+  //   if (profile?.accountStatus === "hold") {
+  //     setCurrentStep("error");
+  //   }
+  //   if (profile?.accountStatus === "blocked") {
+  //     setCurrentStep("error");
+  //   }
+  // }, [profile]);
   return (
     <div>
       {currentStep === "error" && <TransferError />}

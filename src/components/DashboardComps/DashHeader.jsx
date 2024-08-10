@@ -46,7 +46,23 @@ const DashHeader = () => {
     router.push("/login");
   };
 
+  function displayInitials(fullName) {
+    var names = fullName.split(" ");
+    var initials = "";
+
+    for (var i = 0; i < names.length; i++) {
+      var name = names[i];
+      initials += name[0];
+    }
+
+    return initials;
+  }
+
   const firstFourItems = transactions.length > 0 && transactions?.slice(0, 4);
+  console.log("user profile", profile);
+  const userInitials = displayInitials(
+    `${profile?.firstName} ${profile?.lastName}`
+  );
 
   return (
     <>
@@ -109,18 +125,36 @@ const DashHeader = () => {
                   <div className="single-item user-area">
                     <div className="profile-area d-flex align-items-center">
                       <span className="user-profile">
-                        <img src="/dash-assets/images/avatar.png" alt="User" />
+                        {/* <div> */}
+                        {!profile?.image ? (
+                          <div className="userProfileImageText2">
+                            <h3>{userInitials}</h3>
+                          </div>
+                        ) : (
+                          <img src={`${profile?.image}`} alt="image" />
+                        )}
+                        {/* </div> */}
+                        {/* <img src="/dash-assets/images/avatar.png" alt="User" /> */}
                       </span>
                       <i className="fa-solid fa-sort-down" />
                     </div>
                     <div className="main-area user-content">
                       <div className="head-area d-flex align-items-center">
                         <div className="profile-img">
+                          {!profile?.image ? (
+                            <div className="userProfileImageText2">
+                              <h3>{userInitials}</h3>
+                            </div>
+                          ) : (
+                            <img className="profile-pics" src={`${profile?.image}`} alt="image" />
+                          )}
+                        </div>
+                        {/* <div className="profile-img">
                           <img
                             src="/dash-assets/images/avatar-2.png"
                             alt="User"
                           />
-                        </div>
+                        </div> */}
                         <div className="profile-head">
                           <a href="javascript:void(0)">
                             <h5>{`${profile?.firstName} ${profile?.lastName}`}</h5>

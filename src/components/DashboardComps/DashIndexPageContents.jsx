@@ -10,6 +10,7 @@ import {
 } from "@/redux/features/transaction/transaction-slice";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import {  TailSpin} from 'react-loader-spinner'
 
 const DashIndexPageContents = () => {
   const dispatch = useDispatch();
@@ -33,7 +34,17 @@ const DashIndexPageContents = () => {
               <div className="section-content">
                 <div className="acc-details">
                   <div className="top-area">
-                    <div className="left-side">
+                    {gettingProfile ? <TailSpin
+  visible={true}
+  height="40"
+  width="40"
+  color="#4743c9"
+  ariaLabel="tail-spin-loading"
+  radius="1"
+  wrapperStyle={{}}
+  wrapperClass=""
+  /> : <>
+  <div className="left-side">
                       <h5>
                         {" "}
                         Hi, {`${profile?.firstName} ${profile?.lastName}`}!
@@ -43,6 +54,8 @@ const DashIndexPageContents = () => {
                         Account Status: <span>{profile?.accountStatus}</span>
                       </h5>
                     </div>
+  </> }
+                    
                     <div className="right-side">
                       <div className="right-top">
                         <select>
@@ -51,10 +64,6 @@ const DashIndexPageContents = () => {
                           <option value="3">US Dollar</option>
                         </select>
                       </div>
-                      {/* <div className="right-bottom">
-                        <h4>$30,700.00</h4>
-                        <h5>Payouts</h5>
-                      </div> */}
                     </div>
                   </div>
                   <div className="bottom-area">
