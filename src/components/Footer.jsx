@@ -43,7 +43,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="col-sm-6">
-                <div className="social-link d-flex justify-content-sm-end justify-content-center align-items-center">
+                {/* <div className="social-link d-flex justify-content-sm-end justify-content-center align-items-center">
                   <a href="javascript:void(0)">
                     <img src="assets/images/icon/facebook.png" alt="icon" />
                   </a>
@@ -56,7 +56,7 @@ const Footer = () => {
                   <a href="javascript:void(0)">
                     <img src="assets/images/icon/twitter.png" alt="icon" />
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -66,8 +66,8 @@ const Footer = () => {
                 <div className="copyright text-center text-sm-start">
                   <p>
                     {" "}
-                    Copyright © 2022 <a href="/">Paylio.</a> All Rights
-                    Reserved.
+                    Copyright © 2022 <a href="/">Elite Trust Finance.</a> All
+                    Rights Reserved.
                   </p>
                 </div>
               </div>
