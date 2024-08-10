@@ -97,6 +97,7 @@ const AccountContents = () => {
                         <img
                           src={`${profile?.image}`}
                           alt="image"
+                          className="profile-pics"
                         />
                       )}
                     </div>
@@ -182,6 +183,7 @@ const AccountContents = () => {
                               </div>
                             ) : (
                               <img
+                              className="profile-pics"
                               src={`${profile?.image}`}
                                 alt="image"
                               />
