@@ -10,7 +10,7 @@ import {
 } from "@/redux/features/transaction/transaction-slice";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {  TailSpin} from 'react-loader-spinner'
+import { TailSpin } from "react-loader-spinner";
 
 const DashIndexPageContents = () => {
   const dispatch = useDispatch();
@@ -34,28 +34,33 @@ const DashIndexPageContents = () => {
               <div className="section-content">
                 <div className="acc-details">
                   <div className="top-area">
-                    {gettingProfile ? <TailSpin
-  visible={true}
-  height="40"
-  width="40"
-  color="#4743c9"
-  ariaLabel="tail-spin-loading"
-  radius="1"
-  wrapperStyle={{}}
-  wrapperClass=""
-  /> : <>
-  <div className="left-side">
-                      <h5>
-                        {" "}
-                        Hi, {`${profile?.firstName} ${profile?.lastName}`}!
-                      </h5>
-                      <h2>${formatAmount(`${profile?.accountBalance}`)}</h2>
-                      <h5 className="receive">
-                        Account Status: <span>{profile?.accountStatus}</span>
-                      </h5>
-                    </div>
-  </> }
-                    
+                    {gettingProfile ? (
+                      <TailSpin
+                        visible={true}
+                        height="40"
+                        width="40"
+                        color="#4743c9"
+                        ariaLabel="tail-spin-loading"
+                        radius="1"
+                        wrapperStyle={{}}
+                        wrapperClass=""
+                      />
+                    ) : (
+                      <>
+                        <div className="left-side">
+                          <h5>
+                            {" "}
+                            Hi, {`${profile?.firstName} ${profile?.lastName}`}!
+                          </h5>
+                          <h2>${formatAmount(`${profile?.accountBalance}`)}</h2>
+                          <h5 className="receive">
+                            Account Status:{" "}
+                            <span>{profile?.accountStatus}</span>
+                          </h5>
+                        </div>
+                      </>
+                    )}
+
                     <div className="right-side">
                       <div className="right-top">
                         <select>
@@ -185,7 +190,16 @@ const DashIndexPageContents = () => {
                                     </p>
                                   </td>
                                   <td>
-                                    <p className="completed">completed</p>
+                                    {item?.transactionStatus ===
+                                      "completed" && (
+                                      <p className="completed">completed</p>
+                                    )}
+                                    {item?.transactionStatus === "pending" && (
+                                      <p className="pending">pending</p>
+                                    )}
+                                    {item?.transactionStatus === "failed" && (
+                                      <p className="cancelled">Failed</p>
+                                    )}
                                   </td>
                                   <td>
                                     <p>-${formatAmount(`${item?.amount}`)}</p>

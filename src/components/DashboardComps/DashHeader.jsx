@@ -193,7 +193,8 @@ const DashHeader = () => {
                 <div className="sidebar-logo">
                   <a href="/dashboard">
                     <img
-                      src="/dash-assets/images/elite-trust-logo-3.png"
+                      // src="/dash-assets/images/elite-trust-logo-3.png"
+                      src="https://res.cloudinary.com/dcbbywfud/image/upload/v1722950816/logo-elite_yonrnb.png"
                       alt="logo"
                     />
                   </a>
