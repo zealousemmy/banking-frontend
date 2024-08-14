@@ -124,7 +124,7 @@ const DashHeader = () => {
                   </div>
                   <div className="single-item user-area">
                     <div className="profile-area d-flex align-items-center">
-                      <span className="user-profile">
+                      <span className="user-profile-container">
                         {/* <div> */}
                         {!profile?.image ? (
                           <div className="userProfileImageText2">

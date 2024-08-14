@@ -414,6 +414,17 @@ label {
   border-radius: 100%;
 }
 
+.user-profile-container {
+  width: 30px;
+  height: inherit;
+}
+
+.user-profile-container img {
+  width: 100%;
+  height: 30px;
+  border-radius: 100%;
+}
+
 .user-profile2 {
   /* display: none; */
   width: 60px;
