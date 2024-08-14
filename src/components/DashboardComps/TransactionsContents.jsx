@@ -1,6 +1,10 @@
 "use client";
 import { formatAmount, formatDate, formatTime } from "@/hooks/formatAmount";
 import {
+  getProfile,
+  profileSelector,
+} from "@/redux/features/profile/profile-slice";
+import {
   getTransfers,
   transactionSelector,
 } from "@/redux/features/transaction/transaction-slice";
@@ -13,7 +17,10 @@ const TransactionsContents = () => {
   const { transactions, gettingTransactions } =
     useSelector(transactionSelector);
 
+  const { profile, gettingProfile } = useSelector(profileSelector);
+
   useEffect(() => {
+    dispatch(getProfile());
     dispatch(getTransfers());
   }, []);
   console.log(transactions, "transactions");
@@ -76,13 +83,26 @@ const TransactionsContents = () => {
                               </p>
                             </td>
                             <td>
-                              <p className="completed">completed</p>
+                              {/* <p className="completed">completed</p> */}
+                              {item?.transactionStatus === "completed" && (
+                                <p className="completed">completed</p>
+                              )}
+                              {item?.transactionStatus === "pending" && (
+                                <p className="pending">pending</p>
+                              )}
+                              {item?.transactionStatus === "failed" && (
+                                <p className="cancelled">Failed</p>
+                              )}
                             </td>
                             <td>
                               <p>-${formatAmount(`${item?.amount}`)}</p>
-                              <p className="mdr">
-                                ${formatAmount(`${item?.senderBalance}`)}
-                              </p>
+                              {profile?._id === item?.receiverId ? (
+                                <p>Received</p>
+                              ) : (
+                                <p className="mdr">
+                                  ${formatAmount(`${item?.senderBalance}`)}
+                                </p>
+                              )}
                             </td>
                           </tr>
                         ))}

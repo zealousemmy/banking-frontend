@@ -203,9 +203,14 @@ const DashIndexPageContents = () => {
                                   </td>
                                   <td>
                                     <p>-${formatAmount(`${item?.amount}`)}</p>
-                                    <p className="mdr">
-                                      ${formatAmount(`${item?.senderBalance}`)}
-                                    </p>
+                                    {profile?._id === item?.receiverId ? (
+                                      <p className="completed">Received</p>
+                                    ) : (
+                                      <p className="mdr">
+                                        $
+                                        {formatAmount(`${item?.senderBalance}`)}
+                                      </p>
+                                    )}
                                   </td>
                                 </tr>
                               ))}
