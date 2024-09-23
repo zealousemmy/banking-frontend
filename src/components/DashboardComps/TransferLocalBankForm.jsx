@@ -153,7 +153,7 @@ const TransferLocalBankForm = ({ handleClick }) => {
                     <div className="input-area">
                       <input
                         className="xxlr"
-                        placeholder={9099900999}
+                        placeholder={909990094}
                         type="text"
                         value={accountNumber}
                         onChange={accountNumberChange}
