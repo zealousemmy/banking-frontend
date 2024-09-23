@@ -27,8 +27,8 @@ const TransferLocalBankForm = ({ handleClick }) => {
   const accountNumberChange = (event) => {
     const value = event.target.value;
     // Allow only numbers and limit to 10 digits
-    const newValue = value.replace(/\D/g, "").slice(0, 10);
-    setAccountNumber(newValue);
+    // const newValue = value.replace(/\D/g, "").slice(0, 10);
+    setAccountNumber(value);
   };
 
   const handleAmountChange = (e) => {
