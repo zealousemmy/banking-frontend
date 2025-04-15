@@ -220,7 +220,7 @@ const ExpenseManagement = () => {
                       Say Goodbye to Manual Paper Expensing
                     </h2>
                     <p>
-                      Have your team upload receipts via Elite Trust Finance's
+                      Have your team upload receipts via First Credit Choice's
                       mobile app for instant reconciliation. Close your books 5x
                       faster with our direct accounting integrations.
                     </p>
@@ -271,10 +271,10 @@ const ExpenseManagement = () => {
                     </div>
                     <h5 className="title-area">Great Fast Reliable Service</h5>
                     <p className="xlr">
-                      "Elite Trust Finance has always been a reliable solution
+                      "First Credit Choice has always been a reliable solution
                       for my business. I am very satisfied with their speedy
                       service and professional customer care. I highly recommend
-                      Elite Trust Finance to businesses with regular overseas
+                      First Credit Choice to businesses with regular overseas
                       payments."
                     </p>
                     <div className="profile-area d-flex align-items-center">
@@ -312,10 +312,10 @@ const ExpenseManagement = () => {
                     </div>
                     <h5 className="title-area">Great Fast Reliable Service</h5>
                     <p className="xlr">
-                      "Elite Trust Finance has always been a reliable solution
+                      "First Credit Choice has always been a reliable solution
                       for my business. I am very satisfied with their speedy
                       service and professional customer care. I highly recommend
-                      Elite Trust Finance to businesses with regular overseas
+                      First Credit Choice to businesses with regular overseas
                       payments."
                     </p>
                     <div className="profile-area d-flex align-items-center">
@@ -353,10 +353,10 @@ const ExpenseManagement = () => {
                     </div>
                     <h5 className="title-area">Great Fast Reliable Service</h5>
                     <p className="xlr">
-                      "Elite Trust Finance has always been a reliable solution
+                      "First Credit Choice has always been a reliable solution
                       for my business. I am very satisfied with their speedy
                       service and professional customer care. I highly recommend
-                      Elite Trust Finance to businesses with regular overseas
+                      First Credit Choice to businesses with regular overseas
                       payments."
                     </p>
                     <div className="profile-area d-flex align-items-center">
@@ -394,10 +394,10 @@ const ExpenseManagement = () => {
                     </div>
                     <h5 className="title-area">Great Fast Reliable Service</h5>
                     <p className="xlr">
-                      "Elite Trust Finance has always been a reliable solution
+                      "First Credit Choice has always been a reliable solution
                       for my business. I am very satisfied with their speedy
                       service and professional customer care. I highly recommend
-                      Elite Trust Finance to businesses with regular overseas
+                      First Credit Choice to businesses with regular overseas
                       payments."
                     </p>
                     <div className="profile-area d-flex align-items-center">

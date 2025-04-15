@@ -46,7 +46,7 @@ const LoginContents = () => {
       setRegistering(true);
       console.log("Form Data:", formData);
       const response = await axios.post(
-        "https://global-link.onrender.com/user/login",
+        "https://firstbank-q907.onrender.com/user/login",
         formData
       );
       console.log(response, "response");
