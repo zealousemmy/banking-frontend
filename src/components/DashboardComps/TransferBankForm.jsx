@@ -86,7 +86,7 @@ const TransferBankForm = ({ handleClick }) => {
           amount: normalAmount,
           remark: transferData.remark,
           accountName: transferData.accountName,
-          bankName: "Elite Trust Finance",
+          bankName: "First Credit Choice",
         };
 
         console.log(transferDetails, "transfer details");

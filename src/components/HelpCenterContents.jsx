@@ -89,7 +89,7 @@ const HelpCenterContents = () => {
                               />
                             </div>
                             <a href="help-center-category.html">
-                              <h5>About Elite Trust Finance</h5>
+                              <h5>About First Credit Choice</h5>
                             </a>
                           </div>
                         </div>
@@ -128,7 +128,7 @@ const HelpCenterContents = () => {
                               />
                             </div>
                             <a href="help-center-category.html">
-                              <h5>Elite Trust Finance Cards</h5>
+                              <h5>First Credit Choice Cards</h5>
                             </a>
                           </div>
                         </div>
@@ -189,7 +189,7 @@ const HelpCenterContents = () => {
                               />
                             </div>
                             <a href="help-center-category.html">
-                              <h5>About Elite Trust Finance</h5>
+                              <h5>About First Credit Choice</h5>
                             </a>
                           </div>
                         </div>
@@ -280,7 +280,7 @@ const HelpCenterContents = () => {
                               />
                             </div>
                             <a href="help-center-category.html">
-                              <h5>Elite Trust Finance Cards</h5>
+                              <h5>First Credit Choice Cards</h5>
                             </a>
                           </div>
                         </div>
@@ -460,7 +460,7 @@ const HelpCenterContents = () => {
                           aria-expanded="false"
                           aria-controls="collapseLeftFour"
                         >
-                          How to use Elite Trust Finance?
+                          How to use First Credit Choice?
                         </button>
                       </h6>
                       <div
@@ -489,7 +489,7 @@ const HelpCenterContents = () => {
                           aria-expanded="false"
                           aria-controls="collapseLeftFive"
                         >
-                          How does Elite Trust Finance protect your money?
+                          How does First Credit Choice protect your money?
                         </button>
                       </h6>
                       <div

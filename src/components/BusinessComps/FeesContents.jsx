@@ -142,7 +142,7 @@ const FeesContents = () => {
                                   <span>€0</span>
                                 </li>
                                 <li>
-                                  <span>Elite Trust Finance Pay</span>
+                                  <span>First Credit Choice Pay</span>
                                   <span>1% + €0.20</span>
                                 </li>
                                 <li>
@@ -293,7 +293,7 @@ const FeesContents = () => {
                                   <span>€10k</span>
                                 </li>
                                 <li>
-                                  <span>Elite Trust Finance Pay</span>
+                                  <span>First Credit Choice Pay</span>
                                   <span>1% + €0.20</span>
                                 </li>
                                 <li>
@@ -439,7 +439,7 @@ const FeesContents = () => {
                                   <span>€0</span>
                                 </li>
                                 <li>
-                                  <span>Elite Trust Finance Pay</span>
+                                  <span>First Credit Choice Pay</span>
                                   <span>1% + €0.20</span>
                                 </li>
                                 <li>
@@ -599,7 +599,7 @@ const FeesContents = () => {
                                   <span>€0</span>
                                 </li>
                                 <li>
-                                  <span>Elite Trust Finance Pay</span>
+                                  <span>First Credit Choice Pay</span>
                                   <span>1% + €0.20</span>
                                 </li>
                                 <li>
@@ -750,7 +750,7 @@ const FeesContents = () => {
                                   <span>€10k</span>
                                 </li>
                                 <li>
-                                  <span>Elite Trust Finance Pay</span>
+                                  <span>First Credit Choice Pay</span>
                                   <span>1% + €0.20</span>
                                 </li>
                                 <li>
@@ -896,7 +896,7 @@ const FeesContents = () => {
                                   <span>€0</span>
                                 </li>
                                 <li>
-                                  <span>Elite Trust Finance Pay</span>
+                                  <span>First Credit Choice Pay</span>
                                   <span>1% + €0.20</span>
                                 </li>
                                 <li>

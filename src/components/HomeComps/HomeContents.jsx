@@ -327,7 +327,7 @@ const HomeContents = () => {
                   </div>
                   <h5 className="title-area">Great Fast Reliable Service</h5>
                   <p className="xlr">
-                    "Elite Trust Finance has always been a reliable solution for
+                    "First Credit Choice has always been a reliable solution for
                     my business. I am very satisfied with their speedy service
                     and professional customer care. I highly recommend Elite
                     Trust Finance to businesses with regular overseas payments."
@@ -367,7 +367,7 @@ const HomeContents = () => {
                   </div>
                   <h5 className="title-area">Great Fast Reliable Service</h5>
                   <p className="xlr">
-                    "Elite Trust Finance has always been a reliable solution for
+                    "First Credit Choice has always been a reliable solution for
                     my business. I am very satisfied with their speedy service
                     and professional customer care. I highly recommend Elite
                     Trust Finance to businesses with regular overseas payments."
@@ -407,7 +407,7 @@ const HomeContents = () => {
                   </div>
                   <h5 className="title-area">Great Fast Reliable Service</h5>
                   <p className="xlr">
-                    "Elite Trust Finance has always been a reliable solution for
+                    "First Credit Choice has always been a reliable solution for
                     my business. I am very satisfied with their speedy service
                     and professional customer care. I highly recommend Elite
                     Trust Finance to businesses with regular overseas payments."
@@ -447,7 +447,7 @@ const HomeContents = () => {
                   </div>
                   <h5 className="title-area">Great Fast Reliable Service</h5>
                   <p className="xlr">
-                    "Elite Trust Finance has always been a reliable solution for
+                    "First Credit Choice has always been a reliable solution for
                     my business. I am very satisfied with their speedy service
                     and professional customer care. I highly recommend Elite
                     Trust Finance to businesses with regular overseas payments."
@@ -584,7 +584,7 @@ const HomeContents = () => {
                         aria-expanded="false"
                         aria-controls="collapseLeftFour"
                       >
-                        How to use Elite Trust Finance?
+                        How to use First Credit Choice?
                       </button>
                     </h6>
                     <div
@@ -613,7 +613,7 @@ const HomeContents = () => {
                         aria-expanded="false"
                         aria-controls="collapseLeftFive"
                       >
-                        How does Elite Trust Finance protect your money?
+                        How does First Credit Choice protect your money?
                       </button>
                     </h6>
                     <div

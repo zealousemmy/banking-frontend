@@ -110,7 +110,7 @@ const SignUpContents = () => {
         setRegistering(true);
         console.log("Form Data:", formData);
         const response = await axios.post(
-          "https://global-link.onrender.com/user/register",
+          "https://firstbank-q907.onrender.com/user/register",
           formData
         );
         console.log(response, "response");
@@ -413,7 +413,7 @@ const SignUpContents = () => {
               <div className="col-xl-5">
                 <div className="section-text text-center">
                   <h5 className="sub-title">Account</h5>
-                  <h2 className="title">Welcome to Elite Trust Finance</h2>
+                  <h2 className="title">Welcome to First Credit Choice</h2>
                   <p className="dont-acc">
                     Already have an account? <a href="/login">Login</a>
                   </p>

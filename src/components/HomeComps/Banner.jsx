@@ -43,7 +43,7 @@ const Banner = () => {
                     <h1 className="title">Pay Anyone, Anywhere</h1>
                     <p className="xlr">
                       Quickly and easily send, receive and request money online
-                      with Elite Trust Finance. Get a customised solution to fit
+                      with First Credit Choice. Get a customised solution to fit
                       your business needs.
                     </p>
                   </div>
@@ -109,7 +109,7 @@ const Banner = () => {
                           </div>
                           <div className="right-area">
                             <span className="mdr highlight">
-                              Elite Trust Finance Rate
+                              First Credit Choice Rate
                             </span>
                           </div>
                         </div>

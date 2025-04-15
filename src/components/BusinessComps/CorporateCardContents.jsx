@@ -338,10 +338,10 @@ const CorporateCardContents = () => {
                     </div>
                     <h5 className="title-area">Great Fast Reliable Service</h5>
                     <p className="xlr">
-                      "Elite Trust Finance has always been a reliable solution
+                      "First Credit Choice has always been a reliable solution
                       for my business. I am very satisfied with their speedy
                       service and professional customer care. I highly recommend
-                      Elite Trust Finance to businesses with regular overseas
+                      First Credit Choice to businesses with regular overseas
                       payments."
                     </p>
                     <div className="profile-area d-flex align-items-center">
@@ -379,10 +379,10 @@ const CorporateCardContents = () => {
                     </div>
                     <h5 className="title-area">Great Fast Reliable Service</h5>
                     <p className="xlr">
-                      "Elite Trust Finance has always been a reliable solution
+                      "First Credit Choice has always been a reliable solution
                       for my business. I am very satisfied with their speedy
                       service and professional customer care. I highly recommend
-                      Elite Trust Finance to businesses with regular overseas
+                      First Credit Choice to businesses with regular overseas
                       payments."
                     </p>
                     <div className="profile-area d-flex align-items-center">
@@ -420,10 +420,10 @@ const CorporateCardContents = () => {
                     </div>
                     <h5 className="title-area">Great Fast Reliable Service</h5>
                     <p className="xlr">
-                      "Elite Trust Finance has always been a reliable solution
+                      "First Credit Choice has always been a reliable solution
                       for my business. I am very satisfied with their speedy
                       service and professional customer care. I highly recommend
-                      Elite Trust Finance to businesses with regular overseas
+                      First Credit Choice to businesses with regular overseas
                       payments."
                     </p>
                     <div className="profile-area d-flex align-items-center">
@@ -461,10 +461,10 @@ const CorporateCardContents = () => {
                     </div>
                     <h5 className="title-area">Great Fast Reliable Service</h5>
                     <p className="xlr">
-                      "Elite Trust Finance has always been a reliable solution
+                      "First Credit Choice has always been a reliable solution
                       for my business. I am very satisfied with their speedy
                       service and professional customer care. I highly recommend
-                      Elite Trust Finance to businesses with regular overseas
+                      First Credit Choice to businesses with regular overseas
                       payments."
                     </p>
                     <div className="profile-area d-flex align-items-center">
@@ -494,7 +494,7 @@ const CorporateCardContents = () => {
                 <div className="col-xl-6 text-center">
                   <div className="section-text">
                     <h2 className="title">
-                      Join Elite Trust Finance Business.
+                      Join First Credit Choice Business.
                     </h2>
                     <p>
                       No-fuss company cards for team members, instant virtual

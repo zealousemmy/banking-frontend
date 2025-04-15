@@ -19,7 +19,7 @@ export default function Layout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>
-          Elite Trust Finance - Money Transfer and Online Payments HTML Template
+          First Credit Choice - Money Transfer and Online Payments HTML Template
         </title>
 
         <link
