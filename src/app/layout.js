@@ -61,6 +61,7 @@ export default function RootLayout({ children }) {
       <Script src="assets/js/plugin/wow.min.js"></Script>
       <Script src="assets/js/plugin/plugin.js"></Script>
       <Script src="assets/js/main.js"></Script>
+      <Script src="//code.tidio.co/vkxl3ojwwnrwaid4vcl1mz1nvl9srwjz.js" async></Script>
     </html>
   );
 }
