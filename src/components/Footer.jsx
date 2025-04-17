@@ -66,7 +66,7 @@ const Footer = () => {
                 <div className="copyright text-center text-sm-start">
                   <p>
                     {" "}
-                    Copyright © 2022 <a href="/">First Credit Choice.</a> All
+                    Copyright © 2025 <a href="/">First Credit Choice.</a> All
                     Rights Reserved.
                   </p>
                 </div>

@@ -508,10 +508,7 @@ const HomeContents = () => {
                     >
                       <div className="accordion-body">
                         <p>
-                          Lorem ipsum dolor sit amet consectetur adipiscing elit
-                          posuere vel venenatis, eu sit massa. Volutpat massa
-                          rhoncus odio feugiat tellus elit massa sed ullamcorper
-                          a in.
+                          login and choose the transfers button.
                         </p>
                       </div>
                     </div>
@@ -540,7 +537,7 @@ const HomeContents = () => {
                           Lorem ipsum dolor sit amet consectetur adipiscing elit
                           posuere vel venenatis, eu sit massa. Volutpat massa
                           rhoncus odio feugiat tellus elit massa sed ullamcorper
-                          a in.
+                          .
                         </p>
                       </div>
                     </div>
