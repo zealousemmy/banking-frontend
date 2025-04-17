@@ -459,7 +459,7 @@ const AboutContents = () => {
                           alt="image"
                         />
                       </div>
-                      <h4>San Francisco</h4>
+                      <h4>Washington DC</h4>
                     </div>
                     <div className="email-phone">
                       <div className="img-box">
