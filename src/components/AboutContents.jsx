@@ -152,9 +152,8 @@ const AboutContents = () => {
                     <div className="text-box">
                       <h4>Commitment</h4>
                       <p>
-                        Lorem ipsum dolor sit amet consectetur imp adipiscing
-                        elit justo aliquet elit sed convallisolo neque aliquam
-                        elementum dolr.
+                      Boosting customer engagement through technology and personalized interactions and 
+                      understanding the role of customer loyalty and a customer-centric strategy
                       </p>
                     </div>
                   </div>
@@ -170,9 +169,8 @@ const AboutContents = () => {
                     <div className="text-box">
                       <h4>Team Work</h4>
                       <p>
-                        Lorem ipsum dolor sit amet consectetur imp adipiscing
-                        elit justo aliquet elit sed convallisolo neque aliquam
-                        elementum dolr.
+                      Effective teamwork practices for banking professionals include communication, collaboration, conflict management, ethics, and learning
+                    
                       </p>
                     </div>
                   </div>
