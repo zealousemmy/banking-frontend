@@ -118,9 +118,8 @@ const AboutContents = () => {
                     <div className="text-box">
                       <h4>Innovation</h4>
                       <p>
-                        Lorem ipsum dolor sit amet consectetur imp adipiscing
-                        elit justo aliquet elit sed convallisolo neque aliquam
-                        elementum dolr.
+                      API integration for seamless data sharing between other banks and third-party services and 
+                      Enhanced collaboration with fintech companies.
                       </p>
                     </div>
                   </div>
