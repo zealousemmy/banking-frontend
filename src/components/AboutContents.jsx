@@ -101,8 +101,7 @@ const AboutContents = () => {
                       The values that drive everything we do
                     </h2>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur imp adipiscing elit
-                      justo aliquet elit sed
+                    Your information is always protected with our industry-leading encryption and security features—active at all times to keep you secure.
                     </p>
                   </div>
                 </div>
@@ -137,9 +136,7 @@ const AboutContents = () => {
                     <div className="text-box">
                       <h4>Accountability</h4>
                       <p>
-                        Lorem ipsum dolor sit amet consectetur imp adipiscing
-                        elit justo aliquet elit sed convallisolo neque aliquam
-                        elementum dolr.
+                      Only share your financial information with people you trust and choose.
                       </p>
                     </div>
                   </div>
