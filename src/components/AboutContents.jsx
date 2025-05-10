@@ -101,8 +101,7 @@ const AboutContents = () => {
                       The values that drive everything we do
                     </h2>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur imp adipiscing elit
-                      justo aliquet elit sed
+                    Your information is always protected with our industry-leading encryption and security features—active at all times to keep you secure.
                     </p>
                   </div>
                 </div>
@@ -119,9 +118,8 @@ const AboutContents = () => {
                     <div className="text-box">
                       <h4>Innovation</h4>
                       <p>
-                        Lorem ipsum dolor sit amet consectetur imp adipiscing
-                        elit justo aliquet elit sed convallisolo neque aliquam
-                        elementum dolr.
+                      API integration for seamless data sharing between other banks and third-party services and 
+                      Enhanced collaboration with fintech companies.
                       </p>
                     </div>
                   </div>
@@ -137,9 +135,7 @@ const AboutContents = () => {
                     <div className="text-box">
                       <h4>Accountability</h4>
                       <p>
-                        Lorem ipsum dolor sit amet consectetur imp adipiscing
-                        elit justo aliquet elit sed convallisolo neque aliquam
-                        elementum dolr.
+                      Only share your financial information with people you trust and choose.
                       </p>
                     </div>
                   </div>
@@ -155,9 +151,8 @@ const AboutContents = () => {
                     <div className="text-box">
                       <h4>Commitment</h4>
                       <p>
-                        Lorem ipsum dolor sit amet consectetur imp adipiscing
-                        elit justo aliquet elit sed convallisolo neque aliquam
-                        elementum dolr.
+                      Boosting customer engagement through technology and personalized interactions and 
+                      understanding the role of customer loyalty and a customer-centric strategy
                       </p>
                     </div>
                   </div>
@@ -173,9 +168,8 @@ const AboutContents = () => {
                     <div className="text-box">
                       <h4>Team Work</h4>
                       <p>
-                        Lorem ipsum dolor sit amet consectetur imp adipiscing
-                        elit justo aliquet elit sed convallisolo neque aliquam
-                        elementum dolr.
+                      Effective teamwork practices for banking professionals include communication, collaboration, conflict management, ethics, and learning
+                    
                       </p>
                     </div>
                   </div>
@@ -459,7 +453,7 @@ const AboutContents = () => {
                           alt="image"
                         />
                       </div>
-                      <h4>San Francisco</h4>
+                      <h4>Washington DC</h4>
                     </div>
                     <div className="email-phone">
                       <div className="img-box">
