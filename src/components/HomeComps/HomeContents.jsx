@@ -409,8 +409,8 @@ const HomeContents = () => {
                   <p className="xlr">
                     "First Credit Choice has always been a reliable solution for
                     my business. I am very satisfied with their speedy service
-                    and professional customer care. I highly recommend Elite
-                    Trust Finance to businesses with regular overseas payments."
+                    and professional customer care. I highly recommend First Credit
+                     choice to businesses with regular overseas payments."
                   </p>
                   <div className="profile-area d-flex align-items-center">
                     <div className="icon-area">
